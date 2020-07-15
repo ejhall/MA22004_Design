@@ -1,0 +1,175 @@
+---
+title: "MA22004 Course Design Plan"
+author: "Dr Eric Hall [(ehall001@dundee.ac.uk)](mailto:ehall001@dundee.ac.uk)"
+date: "`r Sys.Date()`"
+output:
+  bookdown::gitbook:
+    config:
+      toc:
+        collapse: no
+        scroll_highlight: yes
+      toolbar:
+        position: fixed
+      download: pdf
+      sharing: null
+      fontsettings:
+        theme: white
+        family: sans
+        size: 2
+      info: yes
+      highlight: pygments
+      number_sections: no
+  bookdown::pdf_book:
+    keep_tex: yes
+  pdf_document: default
+description: Notes for course design, MA22004 Statistics II, University of Dundee.
+---
+
+```{r setup, include=FALSE}
+# packages
+library(bookdown)
+library(plotly)
+library(tidyverse)
+library(reshape2)
+library(latex2exp)
+library(svglite)
+library(knitr)
+
+knitr::opts_chunk$set(echo = TRUE, comment = "") #, dev = "svglite"
+#plotly::config(plot_ly(), displaylogo = FALSE, mathjax = "cdn")
+```
+
+# Learning {#learning}
+
+> *Wir shaffen das.*
+
+*Summary:* runs for 11 weeks (20 SCQF/10 ECTS) approx 200 hours student effort including 55 contact hours.
+
+There will be 1 seminars of one-hour each (**timetabled, online**), 1 workshop of one-hour (**timetabled, face-to-face**), and 1 lab of two hours (**online, asynchronous**). The expectation will be that students access and engage with the lecture notes and curated digital content before participating in the seminar. 
+
+## Asynchronous content {-}
+
+All of this content will be available online. 
+
+Course notes (ACQUIRING)
+:  **needs to be prepared** (use of existing hand-written notes with some modificaitons), this content will consist of HTML and PDF notes generated using `Rmarkdown`.
+
+Interactive computer labs (PRODUCING, PRACTICING)
+:  **needs to be prepared** (use of prepared labs with content converted to `Rmarkdown` and interactive elements added), this content will consist of  interactive `R` computer labs coded using `learnr` and `gradethis`. **Digital [need](#needs):** RStudio Cloud.
+
+Curated digital content (INQUIRING)
+:  a collection of digital content for students to explore, e.g., online lectures by [David Spiegelhalter](https://www.youtube.com/watch?v=a1PtQ67urG4), [Hans Rosling](https://www.youtube.com/watch?v=hVimVzgtD6w), etc; [spurious correlations](http://tylervigen.com/spurious-correlations), [Datasaurus Dozen]([https://www.autodeskresearch.com/publications/samestats), etc. Shared via Blackboard or [padlet](https://padlet.com/).
+
+## Synchronous content {-}
+
+This content must be **timetabled**.
+
+### Face-to-face {-}
+
+Workshops (PRACTICING, COLLABORATING, DISCUSSING)
+:  In which students will meet together to work in small groups (5 or 6). The first couple of meetings will involve meeting outdoors, e.g., UoD Botanical Gardens or a park, to collect data (circumference of trees, heights of people, number of people crossing at a busy intersection, etc) that will later be discussed an analyzed. The students will utilized worksheet handouts that are already prepared.
+
+### Online {-}
+
+Seminars (DISCUSSING, PRODUCING, PRACTICING)
+:  In which we will have a discussion of the main topics for the week, guided by student polling (using either [mentimeter](https://www.mentimeter.com/) or [itempool](https://itempool.com/). Periodic quizzes will be given in seminars to assess student attainment. A portion of each seminar will involve a lab presentation given by one of the groups.
+
+Examinations (PRODUCING)
+:  Midterm and Final examinations will need to be timetabled to lessen the chance of cheating. The Final Examination can also be given during the May diet.
+
+# Engagement {#engagement}
+
+> The active learning categorization for each teaching task are identified in [§ Learning](#learning)
+
+There are several points that can be measured to assess engagement, including: 
+
++ Students will be presented with a new collection of notes that will roll out weekly using a tool like [perusall](https://perusall.com/) (or possibly Blackboard forums). They will be responsible for posting both questions and responses to the message boards for each new collection of notes.  
++ During seminars, students will be presented with **polls** to encourage reflection and discussion.
++ During seminars, students will take turns giving a lab report **presentation** with their workshop groups. This will encourage students to challenge each others analysis.
++ Students will be expected to hand-in assignments for continuous assessment.
++ Students will be expected to sit Midterm examinations. The grades of these examinations will offer opportunities for intervention. 
+
+# Attainment
+
+
+
+# Assessment {#assessment}
+
+The module assessment will be weighted:
+```{r table, echo=FALSE}
+df <- tibble(Assessment=c("Assignments", "Midterm Exam 1", "Midterm Exam 2", "Final Exam"),
+             Weight=c("20%", "20%", "20%", "40%"))
+kable(df)
+```
+Note: This is a modification from the previous split (60% degree exam, 20% two 
+class tests, and 20% coursework). As the students will not be given a revision period, the Final Exam will need to be less cumulative in scope and therefore additional weight will be placed on the Midterm Exams.
+
+## Examinations {-}
+The **Final Exam** will be a two-hour hand-written exam. Students will be given one additional hour to scan, code, and upload their manuscripts using [gradescope](https://www.gradescope.com/). This process will be thoroughly discussed and practiced by the students with a dummy exam in advance of a real submission. The Final Exam will either be given in the last week of term (week 11) or during the May exam diet.
+
+The **Midterm Exams** will either be hand-written or computer-assessed and will be one-hour in scope instead of two. These will likely be held in week 4 and week 8. 
+
+## Assignments {-}
+
+The assessed courwork will include 6 lab reports and 1 lab report presentation (group work). 
+
+# NEEDS {#needs}
+
+## Digital needs {-}
+1. bringing computer lab into cloud: semester subsription to [RStudio Cloud](https://rstudio.cloud/)^[A better long-term solution would be to run `RStudio Server Pro` and `RStudio Connect` on in-house server running, licenses are available for [free](https://rstudio.com/pricing/academic-pricing/) for teaching purposes.] (approx. 1000 USD)
+2. polling: [mentimeter](https://www.mentimeter.com/) or [itempool](https://itempool.com/)
+
+## Hardware needs {-}
+1. Better microphone
+2. Tablet with stylus
+
+
+# Rmarkdown Example {-}
+
+## Math {-}
+
+Here is an example page containing math markdown.
+
+```{latex} 
+We can use inline math, $f_X$, $f_Y$, and $f_{X,Y}$, as well as display math, 
+\[
+  I(X;Y)
+  = \iint_{\mathcal{X} \otimes \mathcal{Y}}
+  \log\left( \frac{f_{X,Y}(x,y)}{f_{X}(x)f_{Y}(y)} \right)
+  f_{X,Y}(x,y) \mathrm{d}y \mathrm{d}x\,.
+\]
+```
+
+to generate:
+
+We can use inline math, $f_X$, $f_Y$, and $f_{X,Y}$, as well as display math, 
+\[
+  I(X;Y)
+  = \iint_{\mathcal{X} \otimes \mathcal{Y}}
+  \log\left( \frac{f_{X,Y}(x,y)}{f_{X}(x)f_{Y}(y)} \right)
+  f_{X,Y}(x,y) \mathrm{d}y \mathrm{d}x\,.
+\]
+
+## Plots {-}
+
+```{r normals-same-var, echo=TRUE, fig.cap="Two normal variates with different means and same variance. Note this figure is a scalable vector graphic --- from what I understand, this is better from an accessbility standpoint."}
+x <- seq(-8, 8, length=1000)
+y0 <- dnorm(x, -2, 1)
+y1 <- dnorm(x, 2, 1)
+df <- tibble(x, y0, y1)
+df <- melt(df, id.var = "x", value.name = "y")
+
+ggplot(data = df, aes(x = x, color = variable)) + geom_line(aes(y=y)) 
+```
+
+The figure with caption caption is created by typing the code directly into the markdown document:
+````
+```{r normals-same-var, echo=TRUE, fig.cap="Two normal variates with different means and same variance. Note this figure is a scalable vector graphic --- from what I understand, this is better from an accessbility standpoint."}`r ''`
+  x <- seq(-8, 8, length=1000)
+  y0 <- dnorm(x, -2, 1)
+  y1 <- dnorm(x, 2, 1)
+  df <- tibble(x, y0, y1)
+  df <- melt(df, id.var = "x", value.name = "y")
+  ggplot(data = df, aes(x = x, color = variable)) + geom_line(aes(y=y)) 
+```
+````

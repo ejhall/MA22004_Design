@@ -14,7 +14,7 @@ output:
         scroll_highlight: yes
       toolbar:
         position: fixed
-      download: "pdf"
+      download: "notes.pdf"
       sharing: null
       fontsettings:
         theme: white

@@ -4,6 +4,7 @@ bookdown::gitbook:
   config:
     toolbar:
       position: fixed
+    download: ["pdf", "epub"]
     sharing: null
     fontsettings:
       theme: white

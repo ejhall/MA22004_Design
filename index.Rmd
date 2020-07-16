@@ -3,6 +3,9 @@ title: "MA22004 Course Design Plan"
 author: "Dr Eric Hall [(ehall001@dundee.ac.uk)](mailto:ehall001@dundee.ac.uk)"
 date: "`r Sys.Date()`"
 output:
+  pdf_document: default
+  bookdown::pdf_book:
+    keep_tex: yes
   bookdown::gitbook:
     config:
       toc:
@@ -19,14 +22,12 @@ output:
       info: yes
       highlight: pygments
       number_sections: no
-  bookdown::pdf_book:
-    keep_tex: yes
-    latex_engine: lualatex
-  pdf_document: default
 description: Notes for course design, MA22004 Statistics II, University of Dundee.
 ---
 
 ```{r setup, include=FALSE}
+#  bookdown::render_book("index.Rmd", "bookdown::gitbook", output_dir = "docs/")
+
 # packages
 library(bookdown)
 library(plotly)
@@ -36,9 +37,11 @@ library(latex2exp)
 library(svglite)
 library(knitr)
 
-knitr::opts_chunk$set(echo = TRUE, comment = "") #, dev = "svglite"
+knitr::opts_chunk$set(echo = TRUE, comment = "", dev = "svglite") #, dev = "svglite"
 #plotly::config(plot_ly(), displaylogo = FALSE, mathjax = "cdn")
 ```
+
+
 
 # Learning {#learning}
 

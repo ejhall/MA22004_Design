@@ -14,8 +14,7 @@ output:
         scroll_highlight: yes
       toolbar:
         position: fixed
-      download: 
-        - ["./_main_files/_book/_main.pdf", "PDF"]
+      download: ["PDF"]
       sharing: null
       fontsettings:
         theme: white
@@ -39,7 +38,7 @@ library(latex2exp)
 library(svglite)
 library(knitr)
 
-knitr::opts_chunk$set(echo = TRUE, comment = "", dev = "svglite") #, dev = "svglite"
+knitr::opts_chunk$set(echo = TRUE, comment = "") #, dev = "svglite"
 #plotly::config(plot_ly(), displaylogo = FALSE, mathjax = "cdn")
 ```
 

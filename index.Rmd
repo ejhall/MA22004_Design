@@ -3,6 +3,7 @@ title: "MA22004 Course Design Plan"
 author: "Dr Eric Hall [(ehall001@dundee.ac.uk)](mailto:ehall001@dundee.ac.uk)"
 date: "`r Sys.Date()`"
 github-repo: "ejhall/MA22004_Design"
+site_url: "https://ejhall.github.io/MA22004_Design/docs/"
 output:
   pdf_document: default
   bookdown::pdf_book:

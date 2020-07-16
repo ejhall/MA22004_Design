@@ -22,7 +22,7 @@ output:
   bookdown::pdf_book:
     keep_tex: yes
   pdf_document: default
-output_dir: "../"
+output_dir: "../docs"
 description: Notes for course design, MA22004 Statistics II, University of Dundee.
 ---
 

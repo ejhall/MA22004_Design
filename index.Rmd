@@ -22,7 +22,7 @@ library(latex2exp)
 library(svglite)
 library(knitr)
 
-knitr::opts_chunk$set(echo = TRUE, comment = "") #, dev = "svglite"
+knitr::opts_chunk$set(echo = TRUE, comment = "", dev = "svglite") #, dev = "svglite"
 #plotly::config(plot_ly(), displaylogo = FALSE, mathjax = "cdn")
 ```
 

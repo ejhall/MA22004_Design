@@ -2,28 +2,12 @@
 title: "MA22004 Course Design Plan"
 author: "Dr Eric Hall [(ehall001@dundee.ac.uk)](mailto:ehall001@dundee.ac.uk)"
 date: "`r Sys.Date()`"
-github-repo: "ejhall/MA22004_Design/docs/"
-output:
-  pdf_document: default
-  bookdown::pdf_book:
-    keep_tex: yes
-  bookdown::gitbook:
-    config:
-      toc:
-        collapse: no
-        scroll_highlight: yes
-      toolbar:
-        position: fixed
-      download: "pdf"
-      sharing: null
-      fontsettings:
-        theme: white
-        family: sans
-        size: 2
-      info: yes
-      highlight: pygments
-      number_sections: no
-description: Notes for course design, MA22004 Statistics II, University of Dundee.
+site: bookdown::bookdown_site
+documentclass: book
+link-citations: yes
+github-repo: ejhall/MA22004_Design/
+url: 'https\://ejhall.github.io/MA22004_Design/'
+description: "Notes for course design, MA22004 Statistics II, University of Dundee."
 ---
 
 ```{r setup, include=FALSE}

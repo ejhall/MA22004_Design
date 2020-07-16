@@ -1,0 +1,6 @@
+book_filename: "design-notes"
+repo: https://github.com/ejhall/MA22004_Design
+output_dir: docs
+rmd_files: ["index.Rmd"]
+clean: [packages.bib, bookdown.bbl]
+new_session: no

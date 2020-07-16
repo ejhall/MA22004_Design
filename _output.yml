@@ -22,9 +22,9 @@ bookdown::gitbook:
         <li><a href="http://uod.ac.uk/sig-home" rel="nofollow"><img width="73" height="73" src="https://www.dundee.ac.uk/media/dundeewebsite/themes/brandnewhope/img/university-of-dundee-email-favicon.png" alt="University of Dundee shield logo"> </a></li>
 bookdown::pdf_book:
   keep_tex: yes
-  includes:
-    in_header: preamble.tex
+  # includes:
+  #   in_header: preamble.tex
   latex_engine: xelatex
   citation_package: natbib
-bookdown::epub_book:
-  stylesheet: style.css
+#  bookdown::epub_book:
+  #  stylesheet: style.css

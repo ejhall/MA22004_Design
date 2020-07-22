@@ -15,6 +15,7 @@ description: "Notes for course design, MA22004 Statistics II, University of Dund
 
 # packages
 library(bookdown)
+library(readr)
 library(plotly)
 library(tidyverse)
 library(reshape2)
@@ -22,64 +23,218 @@ library(latex2exp)
 library(svglite)
 library(knitr)
 
-knitr::opts_chunk$set(echo = TRUE, comment = "", dev = "svglite") #, dev = "svglite"
+knitr::opts_chunk$set(echo = TRUE, comment = "") #, dev = "svglite", fig.width=8
 #plotly::config(plot_ly(), displaylogo = FALSE, mathjax = "cdn")
 ```
 
 
 
-# Learning {#learning}
+# Teaching-Learning Activities {#learning}
 
 > *Wir shaffen das.*
 
-*Summary:* runs for 11 weeks (20 SCQF/10 ECTS) approx 200 hours student effort including 55 contact hours.
+*Summary:* MA22004 will run for 11 weeks (20 SCQF/10 ECTS) requiring approximately 200 hours student effort (or 17.5 hours per week less the examination time). On an average week there will be seven planned teaching and learning activities, detailed below. These include 1 seminar (1 h duration, **timetabled**, **online**), 1 workshop (1 hour duration, **timetabled**, **face-to-face**), and 1 lab (approx. variable duration, **online, asynchronous**). The expectation will be that students access and engage with the lecture notes and curated digital content before participating in the seminar. 
 
-There will be 1 seminars of one-hour each (**timetabled, online**), 1 workshop of one-hour (**timetabled, face-to-face**), and 1 lab of two hours (**online, asynchronous**). The expectation will be that students access and engage with the lecture notes and curated digital content before participating in the seminar. 
+## Seminar Reading
 
-## Asynchronous content {-}
+> This activity contains an [engagement](#engagement) measure.
 
-All of this content will be available online. 
+  --------------------- ----------- ------------- -------------------------- ----------
+  *Read Watch Listen*   *3 hours*   *1 student*   *Tutor is not available*   *Online*
+  --------------------- ----------- ------------- -------------------------- ----------
 
-Course notes (ACQUIRING)
-:  **needs to be prepared** (use of existing hand-written notes with some modificaitons), this content will consist of HTML and PDF notes generated using `Rmarkdown`.
+Read lecture notes.
 
-Interactive computer labs (PRODUCING, PRACTICING)
-:  **needs to be prepared** (use of prepared labs with content converted to `Rmarkdown` and interactive elements added), this content will consist of  interactive `R` computer labs coded using `learnr` and `gradethis`. **Digital [need](#needs):** RStudio Cloud.
+  --------------- ---------- -------------- -------------------------- ----------
+  *Collaborate*   *1 hour*   *6 students*   *Tutor is not available*   *Online*
+  --------------- ---------- -------------- -------------------------- ----------
 
-Curated digital content (INQUIRING)
-:  a collection of digital content for students to explore, e.g., online lectures by [David Spiegelhalter](https://www.youtube.com/watch?v=a1PtQ67urG4), [Hans Rosling](https://www.youtube.com/watch?v=hVimVzgtD6w), etc; [spurious correlations](http://tylervigen.com/spurious-correlations), [Datasaurus Dozen]([https://www.autodeskresearch.com/publications/samestats), etc. Shared via Blackboard or [padlet](https://padlet.com/).
+(Pre Seminar) Comment on lecture notes through Persuall (measure
+engagement by fixed number of questions/answers asked).
 
-## Synchronous content {-}
+  --------------- ---------- ------------- -------------------------- ----------
+  *Investigate*   *1 hour*   *1 student*   *Tutor is not available*   *Online*
+  --------------- ---------- ------------- -------------------------- ----------
 
-This content must be **timetabled**.
+(Post Seminar) Understand connections between material by exploring
+comments and questions and through reflection.
 
-### Face-to-face {-}
+## Preparation: Seminar Investigation
 
-Workshops (PRACTICING, COLLABORATING, DISCUSSING)
-:  In which students will meet together to work in small groups (5 or 6). The first couple of meetings will involve meeting outdoors, e.g., UoD Botanical Gardens or a park, to collect data (circumference of trees, heights of people, number of people crossing at a busy intersection, etc) that will later be discussed an analyzed. The students will utilized worksheet handouts that are already prepared.
+  --------------- ---------- ------------- -------------------------- ----------
+  *Investigate*   *1 hour*   *1 student*   *Tutor is not available*   *Online*
+  --------------- ---------- ------------- -------------------------- ----------
 
-### Online {-}
+Supplementary online material (curated content).
 
-Seminars (DISCUSSING, PRODUCING, PRACTICING)
-:  In which we will have a discussion of the main topics for the week, guided by student polling (using either [mentimeter](https://www.mentimeter.com/) or [itempool](https://itempool.com/). Periodic quizzes will be given in seminars to assess student attainment. A portion of each seminar will involve a lab presentation given by one of the groups.
+## Seminar
 
-Examinations (PRODUCING)
-:  Midterm and Final examinations will need to be timetabled to lessen the chance of cheating. The Final Examination can also be given during the May diet.
+> This activity contains both [engagement](#engagement) and [assessment](#assessment) measures.
 
-# Engagement {#engagement}
+  ----------- -------------- ------------- ---------------------- ----------
+  *Produce*   *10 minutes*   *1 student*   *Tutor is available*   *Online*
+  ----------- -------------- ------------- ---------------------- ----------
 
-> The active learning categorization for each teaching task are identified in [§ Learning](#learning)
+Seminar quiz (measure attainment based on quiz grade).
+
+  ----------- -------------- --------------- ---------------------- ----------
+  *Discuss*   *40 minutes*   *60 students*   *Tutor is available*   *Online*
+  ----------- -------------- --------------- ---------------------- ----------
+
+Review key points of material with appropriate polling (measure
+engagement by participation in polling and discussion).
+
+  ------------ -------------- -------------- ---------------------- ----------
+  *Practice*   *10 minutes*   *6 students*   *Tutor is available*   *Online*
+  ------------ -------------- -------------- ---------------------- ----------
+
+Student presentations: either a lab presentation or solutions to the seminar quiz. Students who are not presenting a lab presentation will be expected to provide the presenting group with feedback (through blackboard). 
+
+## Computer lab 
+
+> This activity contains both [engagement](#engagement) and [assessment](#assessment) measures.
+
+  --------------------- ------------------------- ------------- -------------------------- ----------
+  *Read Watch Listen*   *1 hour and 30 minutes*   *1 student*   *Tutor is not available*   *Online*
+  --------------------- ------------------------- ------------- -------------------------- ----------
+
+Read instructions and examples.
+
+  ------------ ----------- ------------- -------------------------- ----------
+  *Practice*   *2 hours*   *1 student*   *Tutor is not available*   *Online*
+  ------------ ----------- ------------- -------------------------- ----------
+
+Practice coding and respond to simple interactive elements that deliver
+instant feedback (measure engagement by responding to interactive
+elements).
+
+  ----------- ----------- ------------- -------------------------- ----------
+  *Produce*   *2 hours*   *1 student*   *Tutor is not available*   *Online*
+  ----------- ----------- ------------- -------------------------- ----------
+
+Answer review questions and submit for evaluation (measure attainment
+based on answers to review questions).
+
+## Preparation: Workshop
+
+  ------------ ----------- ------------- -------------------------- ----------
+  *Practice*   *2 hours*   *1 student*   *Tutor is not available*   *Online*
+  ------------ ----------- ------------- -------------------------- ----------
+
+Attempt workshop problems.
+
+## Workshop (Face-to-face)
+
+  --------------- ---------- -------------- ---------------------- -------
+  *Collaborate*   *1 hour*   *6 students*   *Tutor is available*   *F2F*
+  --------------- ---------- -------------- ---------------------- -------
+
+Students discuss problems together in small groups. *This could be done
+using break-out rooms if face-to-face meeting not possible.*
+
+## Office Hours
+
+  ----------- ----------- -------------- ---------------------- ----------
+  *Discuss*   *2 hours*   *6 students*   *Tutor is available*   *Online*
+  ----------- ----------- -------------- ---------------------- ----------
+
+Instructor available to answer questions about lab/reading. Typically
+this will not be one-on-one but small group meetings.
+
+## Representations of the learning experience {-}
+
+```{r table-learning, echo=FALSE, warning = FALSE, message = FALSE, fig.cap = "Breakdown of teaching-learning activity by learning type."}
+input <- read_csv("dat/learning.csv")
+df <- tibble(input)
+ggplot(df, aes(fill = `Learning through`, x = Minutes, y = factor(1))) + 
+  geom_bar(position = "fill", stat = "identity") + 
+  theme_void() + coord_fixed(ratio = 0.3) +
+  theme(legend.position = "bottom", plot.margin=grid::unit(c(0,0,0,0), "mm"))
+kable(df)
+```
+
+```{r table-group, echo=FALSE, , warning = FALSE, message = FALSE, fig.cap = "Breakdown of teaching-learning activity by group interaction."}
+input <- read_csv("dat/group.csv")
+df <- tibble(input)
+ggplot(df, aes(fill = Mode, x = Minutes, y = factor(1))) + 
+  geom_bar(position = "fill", stat = "identity") + 
+  theme_void() + coord_fixed(ratio = 0.3) +
+  theme(legend.position = "bottom", plot.margin=grid::unit(c(0,0,0,0), "mm"))
+kable(df)
+```
+
+```{r table-f2f, echo=FALSE, warning = FALSE, message = FALSE, fig.cap = "Breakdown of teaching-learning activity by online/face-to-face split."}
+input  <- read_csv("dat/f2f.csv")
+df <- tibble(input)
+ggplot(df, aes(fill = Mode, x = Minutes, y = factor(1))) + 
+  geom_bar(position = "fill", stat = "identity") + 
+  theme_void() + coord_fixed(ratio = 0.3) +
+  theme(legend.position = "bottom", plot.margin=grid::unit(c(0,0,0,0), "mm"))
+kable(df)
+```
+
+```{r table-present, echo=FALSE, warning = FALSE, message = FALSE, fig.cap = "Breakdown of teaching-learning activity by lecturer present/not present split."}
+input <- read_csv("dat/present.csv")
+df <- tibble(input)
+ggplot(df, aes(fill = Mode, x = Minutes, y = factor(1))) + 
+  geom_bar(position = "fill", stat = "identity") + 
+  theme_void() + coord_fixed(ratio = 0.3) +
+  theme(legend.position = "bottom", plot.margin=grid::unit(c(0,0,0,0), "mm"))
+kable(df)
+```
+
+
+<!-- ## Asynchronous content {-} -->
+
+<!-- All of this content will be available online.  -->
+
+<!-- Course notes (ACQUIRING) -->
+<!-- :  **needs to be prepared** (use of existing hand-written notes with some modificaitons), this content will consist of HTML and PDF notes generated using `Rmarkdown`. -->
+
+<!-- Interactive computer labs (PRODUCING, PRACTICING) -->
+<!-- :  **needs to be prepared** (use of prepared labs with content converted to `Rmarkdown` and interactive elements added), this content will consist of  interactive `R` computer labs coded using `learnr` and `gradethis`. **Digital [need](#needs):** RStudio Cloud. -->
+
+<!-- Curated digital content (INQUIRING) -->
+<!-- :  a collection of digital content for students to explore, e.g., online lectures by [David Spiegelhalter](https://www.youtube.com/watch?v=a1PtQ67urG4), [Hans Rosling](https://www.youtube.com/watch?v=hVimVzgtD6w), etc; [spurious correlations](http://tylervigen.com/spurious-correlations), [Datasaurus Dozen]([https://www.autodeskresearch.com/publications/samestats), etc. Shared via Blackboard or [padlet](https://padlet.com/). -->
+
+<!-- ## Synchronous content {-} -->
+
+<!-- This content must be **timetabled**. -->
+
+<!-- ### Face-to-face {-} -->
+
+<!-- Workshops (PRACTICING, COLLABORATING, DISCUSSING) -->
+<!-- :  In which students will meet together to work in small groups (5 or 6). The first couple of meetings will involve meeting outdoors, e.g., UoD Botanical Gardens or a park, to collect data (circumference of trees, heights of people, number of people crossing at a busy intersection, etc) that will later be discussed an analyzed. The students will utilized worksheet handouts that are already prepared. -->
+
+<!-- ### Online {-} -->
+
+<!-- Seminars (DISCUSSING, PRODUCING, PRACTICING) -->
+<!-- :  In which we will have a discussion of the main topics for the week, guided by student polling (using either [mentimeter](https://www.mentimeter.com/) or [itempool](https://itempool.com/). Periodic quizzes will be given in seminars to assess student attainment. A portion of each seminar will involve a lab presentation given by one of the groups. -->
+
+<!-- Examinations (PRODUCING) -->
+<!-- :  Midterm and Final examinations will need to be timetabled to lessen the chance of cheating. The Final Examination can also be given during the May diet. -->
+
+# Engagement and Attainment {#engagement}
+
+> The active learning categorization for each activity is identified in [§ Learning](#learning).
+
+## Engagement Plan 
 
 There are several points that can be measured to assess engagement, including: 
 
-+ Students will be presented with a new collection of notes that will roll out weekly using a tool like [perusall](https://perusall.com/) (or possibly Blackboard forums). They will be responsible for posting both questions and responses to the message boards for each new collection of notes.  
-+ During seminars, students will be presented with **polls** to encourage reflection and discussion.
-+ During seminars, students will take turns giving a lab report **presentation** with their workshop groups. This will encourage students to challenge each others analysis.
-+ Students will be expected to hand-in assignments for continuous assessment.
-+ Students will be expected to sit Midterm examinations. The grades of these examinations will offer opportunities for intervention. 
++ **Seminar Reading** Students will be presented with a new collection of notes weekly using  [Perusall](https://perusall.com/). Students will be responsible for reading notes posting both questions/comments and responses (collaborative annotation). Student engagement will be tracked in Perusall through quality of discourse.
++ **Seminar** During seminars, students will be presented with *live polls*, using either [Mentimeter](https://www.mentimeter.com/) or [Itempool](https://itempool.com/), to encourage reflection and discussion. Student engagement will be assessed through participation.
++ **Seminar** During seminars, students will take turns *presenting* a lab report or quiz solutions with their workshop groups. This will encourage students to challenge their peer's analysis. Student engagement will be assessed through participation. 
++ **Computer Lab** Students will be required to *respond* to questions that will be computer-graded in interactive computer labs. Student engagement will be assessed through quality of responses. 
 
-# Attainment
+## Attainment Plan 
 
+Student attainment will be assessed continuously through the evaluation of student produced materials and presentations. These items include:
++ lab reports,
++ lab presentation (group), 
++ two midterm examinations (computer graded). 
+The grades of these continuous assessment will offer opportunities for intervention and students will receive 
+The final examination will provide a comprehensive assessment of the whole course. 
 
 
 # Assessment {#assessment}
@@ -93,14 +248,15 @@ kable(df)
 Note: This is a modification from the previous split (60% degree exam, 20% two 
 class tests, and 20% coursework). As the students will not be given a revision period, the Final Exam will need to be less cumulative in scope and therefore additional weight will be placed on the Midterm Exams.
 
-## Examinations {-}
-The **Final Exam** will be a two-hour hand-written exam. Students will be given one additional hour to scan, code, and upload their manuscripts using [gradescope](https://www.gradescope.com/). This process will be thoroughly discussed and practiced by the students with a dummy exam in advance of a real submission. The Final Exam will either be given in the last week of term (week 11) or during the May exam diet.
+## Examinations
 
-The **Midterm Exams** will either be hand-written or computer-assessed and will be one-hour in scope instead of two. These will likely be held in week 4 and week 8. 
+The **Midterm Exams** will be computer-assessed and will be 1 hour in scope (compared to the 2 hour Final Exam). These will likely be held in week 4 and week 8. 
 
-## Assignments {-}
+The **Final Exam** will be a 2 hour hand-written exam. Students will be given one additional hour to scan, code, and upload their manuscripts using [Gradescope](https://www.gradescope.com/). This process will be thoroughly discussed and practiced by the students with a dummy exam in advance of a real submission. The Final Exam will be given in the last week of term (i.e., during week 11).
 
-The assessed courwork will include 6 lab reports and 1 lab report presentation (group work). 
+## Assignments
+
+The assessed coursework will include 6 lab reports and 1 lab report presentation (group work). 
 
 # NEEDS {#needs}
 
@@ -141,7 +297,7 @@ We can use inline math, $f_X$, $f_Y$, and $f_{X,Y}$, as well as display math,
 
 ## Plots {-}
 
-```{r normals-same-var, echo=TRUE, fig.cap="Two normal variates with different means and same variance. Note this figure is a scalable vector graphic --- from what I understand, this is better from an accessbility standpoint."}
+```{r normals-same-var, echo=TRUE, fig.cap = "Two normal variates with different means and same variance. Note this figure is a scalable vector graphic --- from what I understand, this is better from an accessbility standpoint."}
 x <- seq(-8, 8, length=1000)
 y0 <- dnorm(x, -2, 1)
 y1 <- dnorm(x, 2, 1)
